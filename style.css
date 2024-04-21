@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+    font-family: new york1;
+    src: url(./growth.ttf);
+}
+@font-face{
+    font-family: new york2;
+    src: url(./new_york_para.ttf);
+}
+::-webkit-scrollbar{
+    display: none; 
+}
+#loader{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 1;
+    /* display: none; */
+}
+#loader h1{
+    font-size: 25vw;
+    font-weight: 500;
+    font-family: new york1;
+    color: rgb(250, 90, 50);
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    padding: 2vh 3vh;
+    z-index: 1;
+}
+#nav h1{
+    font-family: new york1;
+    font-size: 5vh;
+    font-weight: 500;
+    color: rgb(250, 90, 50);
+}
+#nav i{
+    font-size: 2.5vh;
+    color: rgb(250, 90, 50);
+}
+#main{
+    overflow: hidden;
+}
+#main #page1{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+#main #page1 img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: contrast(100%) brightness(50%);
+}
+#main #page1 #newyork{
+    height: 30vh;
+    width: 96vw;
+    margin: 2vw;
+    margin-top: 10vh;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main #page1 #newyork h1{
+    font-family: new york1;
+    font-size: 22vw;
+    font-weight: 500;
+    color: rgb(250, 90, 50);
+}
+#main #page1 p{
+    top: 50%;
+    left: 2.5%;
+    font-family: new york2;
+    width: 35vh;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-weight: 400;
+}
+#page2{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 #left{
+    height: 60vh;
+    width: 35vw;
+}
+#page2 #left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: all ease 0.5s;
+}
+#page2 #left img:hover{
+    filter: grayscale(0);
+}
+#page2 #right{
+    height: 60vh;
+    width: 30vw;}
+#page2 #right h1{
+    font-size: 20vw;
+    margin-left: -8vw;
+    margin-top: 5vh;
+    position: absolute;
+    font-weight: 500;
+    font-family: new york1;
+    color: rgb(250, 90, 50);
+}
+#page2 #right p{
+    margin-left: 10vw;
+    margin-top: 4vh;
+    font-size: 1.3vh;
+    font-family: new york2;
+    width: 17vw;
+}
+#page2 #right #para{
+    margin-top: 40vh;
+}
+span{
+    color: rgb(250, 90, 50);
+}
+#page3{
+    height: 85vh;
+    width: 100vw;
+    padding: 10vh 0;
+}
+#page3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: all ease 0.5s;
+}
+#page3 img:hover{ 
+    filter: grayscale(0);
+}
+#page4 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page4 #left{
+    height: 85%;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page4 #left h1{
+    z-index: 9;
+    font-size: 20vw;
+    font-weight: 500;
+    font-family: new york1;
+    color: rgb(250, 90, 50);
+}
+#page4 #left p{
+    font-size: 1.5vh;
+    width: 20vw;
+    font-size: ner york2;
+    font-weight: 500;
+}
+#page4 #left h2{
+    font-size: 10vw;
+    font-family: new york1;
+    font-weight: 500;
+}
+#page4 #right{
+    height: 70%;
+    width: 50vw;
+    z-index: 0;
+}
+#page4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: all ease 0.5s;
+}
+#page4 img:hover{
+    filter: grayscale(0);
+}
+#page5{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+    /* overflow: auto; */
+    background-color: black;
+}
+#page5 h1{
+    font-size: 20vw;
+    font-weight: 500;
+    font-family: new york1;
+    z-index: 0;
+    color: rgb(250, 90, 50);
+}
+#page5 p{
+    font-size: 1.5vh;
+    width: 20vw;
+    color: white;
+    font-size: ner york2;
+    font-weight: 500;
+}
+#page5 #swiper{
+    display: flex;
+    height: 60vh;
+    width: 650vh;
+    overflow: auto;
+    /* background-color: chocolate; */
+}
+#page5 #swiper img{
+    margin-left: 15vh;
+}
+#page5 #swiper1{
+    height: 100%;
+    width: 100vh;
+}
+#page5 #swiper2{
+    height: 40vh;
+    width: 50vh;
+}
+#page5 #swiper4{
+    height: 40vh;
+    width: 50vh;
+}
+#page5 #swiper7{
+    height: 40vh;
+    width: 50vh;
+}
+
+
+
+#page6 {
+    height: 200vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20vh 10vw;
+}
+#page6 #left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page6 #left #image1{
+    height: 35vw;
+    width: 30vw;
+}
+#page6 #left #image1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page6 #right{
+    height: 80%;
+    width: 50%;
+}
+#page6 #right h1{
+    font-size: 20vw;
+    font-family: new york1;
+    color: rgb(250, 90, 50);
+    font-weight: 500;
+}
+#page6 #right p{
+    font-family: new york2;
+    width: 65%;
+    margin-top: 2vw;
+    font-size: 0.8vw;
+}
+
+#page6 #right #image{
+    margin-top: 2vw;
+    height: 35vw;
+    width: 75%;
+}
+#page6 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: all ease 0.5s;
+}
+
+#page6 img:hover{
+    filter: grayscale(0);
+}
+
+#page7{
+    height: 100vh;
+    width: 100vw;
+    padding: 10vh 10vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#page7 #left{
+    height: 100%;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page7 #left h1{
+    font-size: 20vw;
+    font-weight: 500;
+    font-family: new york1;
+    color: rgb(250, 90, 50);
+}
+#page7 #left p{
+    font-size: 1.5vh;
+    width: 18vw;
+    font-size: ner york2;
+    font-weight: 500;
+}
+#page7 #right{
+    height: 80%;
+    width: 35vw;
+}
+#page7 #right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page8{
+    height: 60vh;
+    width: 100vw;
+    padding: 0 15vw;
+}
+#page8 img{
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
